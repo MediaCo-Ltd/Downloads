@@ -79,8 +79,8 @@ Select Case appId
         Response.End
 End Select
 
-' Build full file path
-filePath = "C:\Applications\" & fileName
+' Build full file path using Server.MapPath for relative path
+filePath = Server.MapPath("apps/" & fileName)
 
 ' Check if file exists
 Dim fso
