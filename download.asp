@@ -18,61 +18,61 @@ appId = CInt(appId)
 ' Whitelist mapping - ONLY these files can be downloaded
 Select Case appId
     Case 1
-        fileName = "AddOrderRef.exe"
+        fileName = "AddOrderRef.zip"
     Case 2
-        fileName = "Courier-Labels.exe"
+        fileName = "Courier-Labels.zip"
     Case 3
-        fileName = "DPDCheck.exe"
+        fileName = "DPDCheck.zip"
     Case 4
-        fileName = "Date-Folders.exe"
+        fileName = "Date-Folders.zip"
     Case 5
-        fileName = "HH-Export.exe"
+        fileName = "HH-Export.zip"
     Case 6
-        fileName = "HS-Report-Email.exe"
+        fileName = "HS-Report-Email.zip"
     Case 7
-        fileName = "IndoorRedo.exe"
+        fileName = "IndoorRedo.zip"
     Case 8
-        fileName = "Invoices.exe"
+        fileName = "Invoices.zip"
     Case 9
-        fileName = "MarkExportWeb.exe"
+        fileName = "MarkExportWeb.zip"
     Case 10
-        fileName = "MDL-Artwork-Email.exe"
+        fileName = "MDL-Artwork-Email.zip"
     Case 11
-        fileName = "MDLTracker.exe"
+        fileName = "MDLTracker.zip"
     Case 12
-        fileName = "MDL-Tracker-Email.exe"
+        fileName = "MDL-Tracker-Email.zip"
     Case 13
-        fileName = "Mgs-Production-Email.exe"
+        fileName = "Mgs-Production-Email.zip"
     Case 14
-        fileName = "MPL-Export-Email.exe"
+        fileName = "MPL-Export-Email.zip"
     Case 15
-        fileName = "MPLTracker.exe"
+        fileName = "MPLTracker.zip"
     Case 16
-        fileName = "MPL-Tracker-Email.exe"
+        fileName = "MPL-Tracker-Email.zip"
     Case 17
-        fileName = "Orders-Today-Orders.exe"
+        fileName = "Orders-Today-Orders.zip"
     Case 18
-        fileName = "Outdoor-Printed.exe"
+        fileName = "Outdoor-Printed.zip"
     Case 19
-        fileName = "OutdoorSpecSheets.exe"
+        fileName = "OutdoorSpecSheets.zip"
     Case 20
-        fileName = "Pricing.exe"
+        fileName = "Pricing.zip"
     Case 21
-        fileName = "Redo-Email.exe"
+        fileName = "Redo-Email.zip"
     Case 22
-        fileName = "Sales-Email.exe"
+        fileName = "Sales-Email.zip"
     Case 23
-        fileName = "ScheduledTasks.exe"
+        fileName = "ScheduledTasks.zip"
     Case 24
-        fileName = "Stock.exe"
+        fileName = "Stock.zip"
     Case 25
-        fileName = "Stock-Report.exe"
+        fileName = "Stock-Report.zip"
     Case 26
-        fileName = "Stock-Sql.exe"
+        fileName = "Stock-Sql.zip"
     Case 27
-        fileName = "Tag-Printer.exe"
+        fileName = "Tag-Printer.zip"
     Case 28
-        fileName = "YTD.exe"
+        fileName = "YTD.zip"
     Case Else
         Response.Status = "404 Not Found"
         Response.Write "Application not found"
@@ -99,7 +99,7 @@ Set fileStream = fso.GetFile(filePath)
 
 ' Set response headers for download
 Response.Clear
-Response.ContentType = "application/octet-stream"
+Response.ContentType = "application/zip"
 Response.AddHeader "Content-Disposition", "attachment; filename=""" & fileName & """"
 Response.AddHeader "Content-Length", CStr(fileStream.Size)
 
